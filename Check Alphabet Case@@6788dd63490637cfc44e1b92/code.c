@@ -5,7 +5,7 @@ int main() {
     if((word >= 'A') && (word <= 'Z')){
         printf("Uppercase");
     }
-    else if((word >= 'a') && (word <= 'z')){
+    else{
         printf("Lowercase");
     }
     
