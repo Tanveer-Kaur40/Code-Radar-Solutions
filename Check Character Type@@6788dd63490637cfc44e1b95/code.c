@@ -1,9 +1,9 @@
 #include <stdio.h>
 int main() {
     char word;
-    scanf("%c%d",&word);
+    scanf("%c", &word);
     if(isalpha(word)){
-        if(word = 'a','e','i','o','u'){
+        if(word == 'a' || word == 'e' || word == 'i' || word == 'o' || word == 'u'){
             printf("Vowel");
         }
         else{
