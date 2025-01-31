@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main() {
-    int age status;
+    int age, status;
     scanf("%d%d",&age ,&status);
     if(age>=18){
         if(status == 0 || status == 1){
