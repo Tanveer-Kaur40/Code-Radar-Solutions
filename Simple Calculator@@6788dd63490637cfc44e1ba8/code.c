@@ -1,16 +1,16 @@
 #include <stdio.h>
 int main() {
-    double a,b;
+    float a,b;
     char sign;
-    scanf("%lf%lf%c",&a ,&b ,&sign);
+    scanf("%f%f%c",&a ,&b ,&sign);
     if(sign == '+'){
-        printf("%.0lf",a+b);
+        printf("%.0f",a+b);
     }
     else if(sign == '-'){
-        printf("%.0lf",a-b);
+        printf("%.0f",a-b);
     }
     else if(sign == '*'){
-        printf("%.0lf",a*b);
+        printf("%.0f",a*b);
     }
     else{
         printf("%.2lf",a/b);
