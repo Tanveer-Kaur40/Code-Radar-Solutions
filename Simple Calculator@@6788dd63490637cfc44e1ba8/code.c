@@ -12,8 +12,11 @@ int main() {
     else if(sign == '*'){
         printf("%.0f",a*b);
     }
-    else{
+    else if(sign == '/'){
         printf("%.2lf",a/b);
+    }
+    else{
+        printf("error");
     }
     return 0;
 }
