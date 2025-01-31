@@ -1,14 +1,12 @@
 #include <stdio.h>
 int main() {
-    int number;
-    scanf("%d",&number);
-    if(isdigit(number)){
-        if(1<=number<=100){
-            printf("In range");
-        }
-        else{
-            printf("Out of Range");
-        }
+    int a;
+    scanf("%d",&a);
+    if(a>0 && a<=100){
+        printf("In Range");
+    }
+    else{
+        printf("Out of Range");
     }
     return 0;
 }
