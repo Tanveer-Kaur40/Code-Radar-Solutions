@@ -1,19 +1,19 @@
 #include <stdio.h>
 int main() {
-    int a,b;
+    double a,b;
     char sign;
-    scanf("%d%d%c",&a ,&b ,&sign);
-    if(sign == +){
-        printf("%d",a+b);
+    scanf("%lf%lf%c",&a ,&b ,&sign);
+    if(sign == '+'){
+        printf("%.0lf",a+b);
     }
-    else if(sign == -){
-        printf("%d",a-b);
+    else if(sign == '-'){
+        printf("%.0lf",a-b);
     }
-    else if(sign == *){
-        printf("%d",a*b);
+    else if(sign == '*'){
+        printf("%.0lf",a*b);
     }
     else{
-        printf("%d",a/b);
+        printf("%.2lf",a/b);
     }
     return 0;
 }
