@@ -2,7 +2,7 @@
 int main() {
     int a,b;
     char sign;
-    scanf("%d%d%c",&a ,&b ,&sign);
+    scanf("%d %d %c", &a ,&b ,&sign);
     if(sign == '+'){
         printf("%d", a+b);
     }
@@ -13,7 +13,12 @@ int main() {
         printf("%d", a*b);
     }
     else if(sign == '/'){
-        printf("%.2f", float(a/b));
+        if(b !=0 ){
+            printf("%.2f", (float)a/b);
+        }
+        else{
+            printf("error");
+        }
     }
     else{
         printf("error");
