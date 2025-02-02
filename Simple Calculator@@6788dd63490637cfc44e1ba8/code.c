@@ -14,7 +14,7 @@ int main() {
     }
     else if(sign == '/'){
         if(b !=0 ){
-            printf("%f", (float)a/b);
+            printf("%.0f", (float)a/b);
         }
         else{
             printf("error");
