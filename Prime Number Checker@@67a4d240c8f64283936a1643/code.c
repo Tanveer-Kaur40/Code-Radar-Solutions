@@ -7,13 +7,13 @@ int isprime(int num){
     }
     return 1;
 }
-// int main() {
-//     int t, num;
-//     scanf("%d",&t);
+int main() {
+    int t, num;
+    scanf("%d",&t);
 
-//     while(t--){
-//         scanf("%d",&num);
-//         printf("%d",isprime(num));
-//     }
-//     return 0;
-// }
+    while(t--){
+        scanf("%d",&num);
+        printf("%d",isprime(num));
+    }
+    return 0;
+}
