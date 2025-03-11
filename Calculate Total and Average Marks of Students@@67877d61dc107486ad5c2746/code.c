@@ -14,7 +14,7 @@ int main(){
         total += s[i].marks;
         float averagemarks = total/n;
         }
-        printf("Total Marks: %.2f\n",total);
-        printf("Average Marks: %.2f",averagemarks);
+        printf("Total Marks: %.2f\n", total);
+        printf("Average Marks: %.2f", averagemarks);
         return 0;
 }
