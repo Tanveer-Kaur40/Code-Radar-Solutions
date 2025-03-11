@@ -11,13 +11,14 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d %s %f",&s[i].rollno, s[i].name, &s[i].marks);
 
-    }
+    
     scanf("%d",&findroll);
     if(findroll == s[i].rollno){
         printf("Student found");
     }
     else {
         printf("Student not found");
+    }
     }
     return 0;
 }
