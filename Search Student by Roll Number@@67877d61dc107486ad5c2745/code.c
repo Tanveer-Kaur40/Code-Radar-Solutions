@@ -13,7 +13,7 @@ int main(){
 
     
     scanf("%d",&findroll);
-    if(findroll == s[i].rollno){
+    if(findroll = s[i].rollno){
         printf("Student found");
     }
     else {
