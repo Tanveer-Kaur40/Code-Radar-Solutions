@@ -11,7 +11,7 @@ int main(){
     struct student s[n] , minimummarks;
     for(int i=0;i<n;i++){
         scanf("%d %s %f",&s[i].rollno, s[i].name, &s[i].marks);
-        if(i==0 || s[i].marks < minimummarks){
+        if(i==0 || s[i].marks < minimummarks.marks){
             minimummarks = s[i];
         }
         }
