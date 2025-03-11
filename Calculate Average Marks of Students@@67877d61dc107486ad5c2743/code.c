@@ -13,7 +13,7 @@ int main(){
     }
     for(int i=0;i<n;i++){
         int sum =0;
-        sum += s[i];
+        sum += s[i].marks;
         averagemarks = sum/n;
         printf("Average Marks: %.2f",averagemarks);
     }
