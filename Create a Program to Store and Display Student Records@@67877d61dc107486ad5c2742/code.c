@@ -12,7 +12,7 @@ int main(){
         scanf("%d %s %f",&s[i].rollno, s[i].name, &s[i].marks);
     }
     for(int i=0;i<n;i++){
-        printf("Roll Number: %d, Name: %s, Marks: %.2f",students[i].roll, students[i].name, students[i].marks);
+        printf("Roll Number: %d, Name: %s, Marks: %.2f",s[i].roll, s[i].name, s[i].marks);
     }
     return 0;
 }
