@@ -11,7 +11,7 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d %s %f",&s[i].rollno, s[i].name, &s[i].marks);
     }
-    averagemarks = s[i].marks/n;
+    averagemarks = s[n].marks/n;
     printf("Average Marks: %.2f",averagemarks);
     return 0;
 }
