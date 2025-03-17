@@ -3,7 +3,8 @@
 int main(){
     char n[100];
     scanf("%s",&n);
-    char temp = n;
+    char temp;
+    strcpy(temp,n);
     int len = strlen(n);
     for(int i=len-1;i<=0;i--){
         if(str(n)==temp){
