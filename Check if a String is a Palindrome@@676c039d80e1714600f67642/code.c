@@ -3,7 +3,7 @@
 int main(){
     char n[100];
     scanf("%s",&n);
-    char temp;
+    char temp[100];
     strcpy(temp,n);
     int len = strlen(n);
     int j=0
