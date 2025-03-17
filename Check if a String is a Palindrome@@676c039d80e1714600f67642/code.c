@@ -7,7 +7,7 @@ int main(){
     strcpy(temp,n);
     int len = strlen(n);
     int j=0;
-    for(int i=len-1;i<=0;i--){
+    for(int i=len-1;i>=0;i--){
         temp[j]=n[i];
         j++;
         temp[len]='\0';
