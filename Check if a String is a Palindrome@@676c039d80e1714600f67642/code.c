@@ -6,13 +6,17 @@ int main(){
     char temp;
     strcpy(temp,n);
     int len = strlen(n);
+    int j=0
     for(int i=len-1;i<=0;i--){
-        if(str(n)==temp){
-            printf("Yes");
-        }
-        else{
-            printf("No");
-        }
+        temp[j]=n[i];
+        j++;
+        rev[len]='\0';
+    }
+    if(strcmp(n,temp)==0){
+        printf("Yes\n");
+    }
+    else{
+        printf("No\n");
     }
     return 0;
 }
