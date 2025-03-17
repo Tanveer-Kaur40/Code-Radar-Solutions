@@ -10,7 +10,7 @@ int main(){
     for(int i=len-1;i>=0;i--){
         temp[j]=n[i];
         j++;
-        temp[len]='\0';
+        
     }
     if(strcmp(n,temp)==0){
         printf("Yes\n");
