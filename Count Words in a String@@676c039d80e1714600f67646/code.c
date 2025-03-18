@@ -6,7 +6,7 @@ int main(){
     int len = strlen(n);
     int count = 0;
     for(int i=0;i<=len;i++){
-        if(str[i]==' ')continue;
+        if(n[i]==' ')continue;
         count++;
     }
     printf("%d",count);
