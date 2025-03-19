@@ -2,16 +2,20 @@
 #include <string.h>
 
 int main() {
-    char n[50];
-    scanf("%[^\n]", n);
-    int len = strlen(n);
-    int count = 0;
+    char str[1000];
+    fgets(str, sizeof(str), stdin); // Read the full input including spaces
 
-    for (int i = 0; i < len; i++) { // Change `<=` to `<` to avoid out-of-bounds access
-        if (n[i] == ' ' && n[i+1] != ' ') continue;
-        count++;
+    int count = 0;
+    int length = strlen(str);
+
+    // Iterate through the string
+    for (int i = 0; i < length; i++) {
+        // Count words when a non-space character follows a space or it's the first word
+        if ((i == 0 || str[i - 1] == ' ') && str[i] != ' ' && str[i] != '\n') {
+            count++;
+        }
     }
 
-    printf("%d", count);
+    printf("%d\n", count);
     return 0;
 }
