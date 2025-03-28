@@ -1,21 +1,23 @@
-void selectionSort(char arr[], int n){
+#include <stdio.h>
+#include <string.h>
+void selectionSort(char arr[][20], int n){
     int minIndex;
-    char temp;
+    char temp[20];
     for(int i=0;i<n-1;i++){
         minIndex = i;
     for(int j= i+1;j<n;j++){
-        if(arr[j]<arr[minIndex]){
+        if(strcmp[j],arr[minIndex] < 0){
             minIndex = j;
         }
     }
     if (minIndex != i) {
-    temp = arr[i];
-    arr[i] = arr[minIndex];
-    arr[minIndex] = temp;
+    strcpy(temp = arr[i]);
+    strcmp(arr[i] = arr[minIndex]);
+    strcmp(arr[minIndex] = temp);
     }
     }
 }
-void printArray(char arr[], int n){
+void printArray(char arr[][20], int n){
     for(int i=0;i<n;i++){
         printf("%s ",arr[i]);
     }
