@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void selectionSort(char arr[][100], int n) { 
+void bubbleSort(char arr[][100], int n) { 
     int minIndex;
     char temp[100]; 
 
