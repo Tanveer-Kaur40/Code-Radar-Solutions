@@ -8,6 +8,7 @@ void sortArray(int arr[], int N){
         }
         else {
             printf("Sorted");
+            break;
         }
     }
 }
