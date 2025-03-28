@@ -5,7 +5,7 @@ void count(int arr[],int N){
         if(arr[i]==arr[i+1]){
             count++;
         }
-    }
+    
     if (count > N / 2) {
             printf("%d", arr[i]);
             return;
@@ -13,6 +13,7 @@ void count(int arr[],int N){
     else{
         printf("-1");
     }
+}
 }
 int main() {
     int N;
