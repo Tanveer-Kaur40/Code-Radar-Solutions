@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
-void selectionSort(char arr[][20], int n) { 
+void selectionSort(char arr[][100], int n) { 
     int minIndex;
-    char temp[20]; 
+    char temp[100]; 
 
     for (int i = 0; i < n - 1; i++) {
         minIndex = i;
@@ -22,7 +22,7 @@ void selectionSort(char arr[][20], int n) {
     }
 }
 
-void printArray(char arr[][20], int n) {
+void printArray(char arr[][100], int n) {
     for (int i = 0; i < n; i++) {
         printf("%s ", arr[i]); 
     }
