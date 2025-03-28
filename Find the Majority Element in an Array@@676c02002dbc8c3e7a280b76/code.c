@@ -8,10 +8,11 @@ void countNum(int arr[],int N){
     
     if (count > N / 2) {
             printf("%d", arr[i]);
-            return;
+            break;
         }
     else{
         printf("-1");
+        break;
     }
 }
 }
