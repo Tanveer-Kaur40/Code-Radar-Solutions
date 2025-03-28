@@ -1,11 +1,12 @@
 #include <stdio.h>
 void evenOdd(int arr[], int N){
+    int count = 0, count1 = 0;
     for(int i=0;i<N;i++){
-        if(arr[i]%2 = 0){
-            int count += i;
+        if(arr[i]%2 == 0){
+            count += i;
         }
         if(arr[i]%2!=0){
-            int count1 +=i;
+            count1 +=i;
         }
     }
     printf("%d %d",count,count1);
