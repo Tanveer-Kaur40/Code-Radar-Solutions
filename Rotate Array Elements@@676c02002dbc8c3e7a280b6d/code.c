@@ -18,9 +18,8 @@ void movePosition(int N, int arr[], int K) {
 
 void printArray(int arr[], int N) {
     for (int i = 0; i < N; i++) {
-        printf("%d ", arr[i]);
+        printf("%d\n", arr[i]);
     }
-    printf("\n");
 }
 
 int main() {
