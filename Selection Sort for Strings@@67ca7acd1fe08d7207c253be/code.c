@@ -6,7 +6,7 @@ void selectionSort(char arr[][20], int n){
     for(int i=0;i<n-1;i++){
         minIndex = i;
     for(int j= i+1;j<n;j++){
-        if(strcmp[j],arr[minIndex] < 0){
+        if(strcmp([j], arr[minIndex]) < 0){
             minIndex = j;
         }
     }
