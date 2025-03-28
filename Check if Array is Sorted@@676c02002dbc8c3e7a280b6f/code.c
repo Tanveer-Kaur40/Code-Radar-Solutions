@@ -3,11 +3,11 @@ void sortArray(int arr[], int N){
     int temp;
     for(int i=0;i<N;i++){
         if(arr[i]>arr[i+1]){
-            printf("Sorted");
+            printf("Not Sorted");
         break;
         }
         else {
-            printf("Not Sorted");
+            printf("Sorted");
         }
     }
 }
