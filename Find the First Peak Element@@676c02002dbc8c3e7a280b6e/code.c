@@ -10,8 +10,9 @@ void peakElement(int arr[], int N){
         else{
             temp = arr[i+1];
         }
+          printf("%d",arr[i]);
     }
-    printf("%d",arr[i]);
+  
 }
 int main(){
     int N;
