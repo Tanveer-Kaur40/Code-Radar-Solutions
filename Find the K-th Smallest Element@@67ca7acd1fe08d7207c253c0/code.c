@@ -1,31 +1,45 @@
 #include <stdio.h>
-#include <stdbool.h>
 
-// Function to check if a number is prime
-bool isPrime(int num) {
-    if (num < 2)
-        return false;
-    for (int i = 2; i * i <= num; i++) {
-        if (num % i == 0)
-            return false;
-    }
-    return true;
-}
 
-// Function to print prime numbers in a given range
-void printPrimesInRange(int start, int end) {
-    bool found = false; // Flag to check if at least one prime exists
+int partition(int arr[], int low, int high) {
+    int pivot = arr[high];  
+    int i = low - 1;
 
-    for (int i = start; i <= end; i++) {
-        if (isPrime(i)) {
-            printf("%d ", i);
-            found = true; // Set flag to true when a prime is found
+    for (int j = low; j < high; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
         }
     }
 
-    if (!found) {
-        printf("No prime numbers");
-    }
     
-    printf("\n");
+    int temp = arr[i + 1];
+    arr[i + 1] = arr[high];
+    arr[high] = temp;
+
+    return i + 1;
+}
+
+
+int quickSelect(int arr[], int low, int high, int k) {
+    if (low <= high) {
+        int pi = partition(arr, low, high);
+
+        if (pi == k - 1)  
+            return arr[pi];
+
+        if (k - 1 < pi)  
+            return quickSelect(arr, low, pi - 1, k);
+
+        return quickSelect(arr, pi + 1, high, k);  
+    }
+    return -1; 
+}
+
+
+int kthSmallest(int arr[], int n, int k) {
+    return quickSelect(arr, 0, n - 1, k);
 }
