@@ -1,0 +1,22 @@
+#include <stdio.h>
+void evenOdd(int arr[], int N){
+    for(int i=0;i<N;i++){
+        if(arr[i]%2 = 0){
+            int count += i;
+        }
+        if(arr[i]%2!=0){
+            int count1 +=i;
+        }
+    }
+    printf("%d %d",count,count1);
+}
+int main(){
+    int N;
+    scanf("%d",&N);
+    int arr[N];
+    for(int i=0;i<N;i++){
+        scanf("%d",&arr[i]);
+    }
+    evenOdd(arr, N);
+    return 0;
+}
