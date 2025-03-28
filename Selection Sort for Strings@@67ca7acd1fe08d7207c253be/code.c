@@ -11,9 +11,9 @@ void selectionSort(char arr[][20], int n){
         }
     }
     if (minIndex != i) {
-    strcpy(temp = arr[i]);
-    strcmp(arr[i] = arr[minIndex]);
-    strcmp(arr[minIndex] = temp);
+    strcpy(temp, arr[i]);
+    strcmp(arr[i], arr[minIndex]);
+    strcmp(arr[minIndex], temp);
     }
     }
 }
