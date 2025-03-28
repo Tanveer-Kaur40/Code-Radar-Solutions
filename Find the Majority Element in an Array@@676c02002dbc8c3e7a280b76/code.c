@@ -8,13 +8,13 @@ void countNum(int arr[],int N){
     
     if (count > N / 2) {
             printf("%d", arr[i]);
-            break;
+            return;
         }
-    else{
-        printf("-1");
-        break;
     }
-}
+        printf("-1");
+    
+    
+
 }
 int main() {
     int N;
