@@ -11,9 +11,11 @@ void selectionSort(char arr[], int n){
             minIndex = j;
         }
     }
+    if (minIndex != i) {
     temp = arr[i];
     arr[i] = arr[minIndex];
     arr[minIndex] = temp;
+    }
     }
 }
 void printArray(char arr[], int n){
