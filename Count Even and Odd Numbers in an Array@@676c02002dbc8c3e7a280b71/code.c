@@ -3,10 +3,10 @@ void evenOdd(int arr[], int N){
     int count = 0, count1 = 0;
     for(int i=0;i<N;i++){
         if(arr[i]%2 == 0){
-            count += i;
+            count++;
         }
-        if(arr[i]%2!=0){
-            count1 +=i;
+        else{
+            count1++;
         }
     }
     printf("%d %d",count,count1);
