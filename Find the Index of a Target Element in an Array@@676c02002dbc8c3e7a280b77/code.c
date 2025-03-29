@@ -3,11 +3,11 @@ void findIndex(int arr[], int n, int T){
     for(int i=0;i<n;i++){
        if(arr[i]==T){
         printf("%d",i);
+        return;
        }
-       else{
-        printf("-1");
-       }
+       
     }
+    printf("-1");
 }
 int main(){
     int n;
@@ -17,6 +17,6 @@ int main(){
         scanf("%d",&arr[i]);
     }
     int T;
-    scanf("%d",T);
+    scanf("%d",&T);
     findIndex(arr ,n ,T);
 }
