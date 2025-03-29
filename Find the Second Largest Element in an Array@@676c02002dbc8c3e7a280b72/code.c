@@ -1,36 +1,42 @@
 #include <stdio.h>
-void findSecondLargest(int arr[], int N){
-    int largest , second_largest;
-    if(arr[0]>arr[1]){
-        largest = arr[0];
-        second_largest = arr[1];
+
+int main() {
+    int n, i;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    
+   
+    if (n < 2) {
+        printf("-1\n");  
+        return 1;
     }
-    else{
-        largest = arr[1];
-        second_largest = arr[0];
+    
+    int arr[n];
+    
+    printf("Enter %d elements: ", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
     }
-    for(int i=0;i<N;i++){
-        if(arr[i] > largest){
+    
+    int largest, second_largest;
+
+    largest = second_largest = -1; 
+    
+
+    for (i = 0; i < n; i++) {
+        if (arr[i] > largest) {
             second_largest = largest;
             largest = arr[i];
-        }
-        else if(arr[i] > second_largest && arr[i] != largest){
+        } else if (arr[i] > second_largest && arr[i] != largest) {
             second_largest = arr[i];
         }
     }
-    printf("%d",second_largest);
-}
-
-int main() {
-    int N;
-    scanf("%d", &N);
-
-    int arr[N];
-    for (int i = 0; i < N; i++) {
-        scanf("%d", &arr[i]); 
+    
+    if (second_largest == -1) {
+        printf("-1\n");
+    } else {
+        printf("%d", second_largest);
     }
-
-    findSecondLargest(arr, N); 
-
+    
     return 0;
 }
