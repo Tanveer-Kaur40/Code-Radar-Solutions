@@ -4,7 +4,7 @@ int main() {
     int n, i;
     
     // Taking array size input
-    printf("Enter the number of elements: ");
+
     scanf("%d", &n);
     
     // Check if size is valid
@@ -14,9 +14,7 @@ int main() {
     }
     
     int arr[n];
-    
-    // Taking array input
-    printf("Enter %d elements: ", n);
+
     for (i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
@@ -37,7 +35,7 @@ int main() {
     if (second_largest == -1) {
         printf("-1\n");
     } else {
-        printf("The second largest number is: %d\n", second_largest);
+        printf("%d", second_largest);
     }
     
     return 0;
