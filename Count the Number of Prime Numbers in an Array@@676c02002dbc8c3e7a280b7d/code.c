@@ -1,8 +1,9 @@
 #include <stdio.h>
 int isPrime(int arr[], int n){
     int count =0;
-    if(num<2) return 0;
+   
     for(int i=0;i<n;i++){
+        if(arr[i]<2) return 0;
         if(arr[i]%i==0) return 0;
         else count++;
     }
