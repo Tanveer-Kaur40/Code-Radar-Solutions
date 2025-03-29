@@ -2,38 +2,44 @@
 
 int main() {
     int n, i;
+    
+    // Taking array size input
+    printf("Enter the number of elements: ");
     scanf("%d", &n);
     
-   
+    // Check if size is valid
     if (n < 2) {
-        printf("-1\n");  
+        printf("-1\n");  // Not enough elements for a second largest
         return 1;
     }
     
     int arr[n];
+    
+    // Taking array input
+    printf("Enter %d elements: ", n);
     for (i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
     
-    int largest, second_largest;
-
-    largest = second_largest = -1; 
+    int largest = arr[0], second_largest = -1;
     
-
-    for (i = 0; i < n; i++) {
+    // Finding the largest and second largest elements
+    for (i = 1; i < n; i++) {
         if (arr[i] > largest) {
             second_largest = largest;
             largest = arr[i];
-        } else if (arr[i] > second_largest && arr[i] != largest) {
+        } else if (arr[i] < largest && (second_largest == -1 || arr[i] > second_largest)) {
             second_largest = arr[i];
         }
     }
     
+    // If second_largest is still -1, it means no valid second largest number exists
     if (second_largest == -1) {
         printf("-1\n");
     } else {
-        printf("%d", second_largest);
+        printf("The second largest number is: %d\n", second_largest);
     }
     
     return 0;
 }
+
