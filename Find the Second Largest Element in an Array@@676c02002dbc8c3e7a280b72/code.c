@@ -1,29 +1,24 @@
 #include <stdio.h>
-#include <limits.h> // For INT_MIN
-
-void findSecondLargest(int arr[], int N) {
-    if (N < 2) {
-        printf("No second largest element\n");
-        return;
+void findSecondLargest(int arr[], int N){
+    int largest , second_largest;
+    if(arr[0]>arr[1]){
+        largest = arr[0];
+        second_largest = arr[1];
     }
-
-    int first = INT_MIN, second = INT_MIN; // Initialize to the smallest possible value
-
-    for (int i = 0; i < N; i++) {
-        if (arr[i] > first) { 
-            second = first; // Update second largest
-            first = arr[i]; // Update largest
-        } else if (arr[i] > second && arr[i] < first) { 
-            second = arr[i]; // Update second largest if it’s smaller than first but greater than second
+    else{
+        largest = arr[1];
+        second_largest = arr[0];
+    }
+    for(int i=0;i<N;i++){
+        if(arr[i] > largest){
+            second_largest = largest;
+            largest = arr[i];
+        }
+        else if(arr[i] > second_largest && arr[i] != largest){
+            second_largest = arr[i];
         }
     }
-
-    if (second == INT_MIN) {
-         printf("-1"); // In case all elements are the same
-
-    } else {
-        printf("%d\n", second);
-    }
+    printf("%d",second_largest);
 }
 
 int main() {
@@ -32,10 +27,10 @@ int main() {
 
     int arr[N];
     for (int i = 0; i < N; i++) {
-        scanf("%d", &arr[i]); // Read input values
+        scanf("%d", &arr[i]); 
     }
 
-    findSecondLargest(arr, N); // Call function
+    findSecondLargest(arr, N); 
 
     return 0;
 }
