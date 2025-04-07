@@ -1,5 +1,5 @@
 #include <stdio.h>
-void findKthMissing(int arr[], int n, int k){
+int findKthMissing(int arr[], int n, int k){
     int count = 0;
     int current = 1;
     int i=0;
