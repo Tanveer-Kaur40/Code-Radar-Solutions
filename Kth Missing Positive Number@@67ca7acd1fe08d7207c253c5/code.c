@@ -11,8 +11,7 @@ int findKthMissing(int arr[], int n, int k){
         else{
             count++;
             if(count == k){
-                printf("%d\n", current);
-                break;
+                return current;
             }
         }
         current++;
