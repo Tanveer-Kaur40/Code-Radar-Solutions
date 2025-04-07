@@ -27,7 +27,7 @@ int main() {
 
     for(i = 0; i < size; i++) {
         if(freq[i] != 0) {
-            printf("%d\t%d\n", arr[i], freq[i]);
+            printf("%d %d\n", arr[i], freq[i]);
         }
     }
 
