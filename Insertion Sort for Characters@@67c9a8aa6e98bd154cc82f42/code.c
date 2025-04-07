@@ -17,11 +17,15 @@ void insertionSort(char arr[], int n) {
         arr[j + 1] = key;
     }
 }
-void printArray(int arr[], int n){
+
+void printArray(char arr[], int n) {
+    int i;
     for(i = 0; i < n; i++) {
         printf("%c ", arr[i]);
     }
+    printf("\n");
 }
+
 
 
 
