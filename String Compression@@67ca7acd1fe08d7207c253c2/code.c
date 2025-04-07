@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 
 void compressString(char* str, char* compressed) {
     int len = strlen(str);
@@ -11,36 +10,36 @@ void compressString(char* str, char* compressed) {
             count++;
         } else {
             compressed[j++] = str[i - 1];
-            // convert count to string and append
-            char countStr[10];
-            sprintf(countStr, "%d", count);
-            for (int k = 0; countStr[k] != '\0'; k++) {
-                compressed[j++] = countStr[k];
+
+            // Convert count to single digits (supporting multiple-digit counts)
+            if (count > 1) {
+                char temp[10];
+                sprintf(temp, "%d", count);
+                for (int k = 0; temp[k] != '\0'; k++) {
+                    compressed[j++] = temp[k];
+                }
             }
+
             count = 1;
         }
     }
 
     compressed[j] = '\0';
 
-    // Check if compression actually shortened the string
+    // Return original if compressed isn't shorter
     if (strlen(compressed) >= len) {
         strcpy(compressed, str);
     }
 }
 
 int main() {
-    char str[100];        // Input string
-    char compressed[200]; // Compressed string with enough space for expansion
+    char str[100];
+    char compressed[200];
 
-    // Read the input string
     scanf("%s", str);
-
-    // Call the compressString function
     compressString(str, compressed);
-
-    // Output the compressed string
     printf("%s\n", compressed);
 
     return 0;
 }
+
