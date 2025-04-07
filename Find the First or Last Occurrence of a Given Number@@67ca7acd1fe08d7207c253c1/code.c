@@ -1,30 +1,22 @@
-#include <stdio.h>
-#include <string.h>
+int findOccurrence(int arr[], int n, int target, char mode) {
+    int left = 0, right = n - 1, result = -1;
 
-// Function to perform string compression
-void findOccurence(int arr[], int n, char *input, char *output) {
-    int i, count, index = 0;
-    int len = strlen(input);
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
 
-    for (i = 0; i < len; i++) {
-        output[index++] = input[i]; // Store the character
-        count = 1;
-
-        // Count consecutive occurrences
-        while (i + 1 < len && input[i] == input[i + 1]) {
-            count++;
-            i++;
-        }
-
-        // Append count only if greater than 1
-        if (count > 1) {
-            index += sprintf(output + index, "%d", count);
+        if (arr[mid] == target) {
+            result = mid; 
+            if (mode == 'F') {
+                right = mid - 1; 
+            } else {
+                left = mid + 1;   
+            }
+        } else if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
         }
     }
-    output[index] = '\0'; // Null-terminate the compressed string
 
-    // If compressed string is not shorter, return original input
-    if (strlen(output) >= len) {
-        strcpy(output, input);
-    }
+    return result;
 }
