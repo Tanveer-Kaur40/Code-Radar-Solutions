@@ -2,7 +2,7 @@
 #include <string.h>
 
 // Function to perform string compression
-void compressString(char *input, char *output) {
+void findOccurence(int arr[], int n, char *input, char *output) {
     int i, count, index = 0;
     int len = strlen(input);
 
