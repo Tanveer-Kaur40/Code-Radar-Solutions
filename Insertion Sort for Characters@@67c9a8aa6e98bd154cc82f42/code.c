@@ -17,25 +17,10 @@ void insertionSort(char arr[], int n) {
         arr[j + 1] = key;
     }
 }
-
-int main() {
-    char arr[] = {'d', 'a', 'c', 'b'};
-    int i;
-    int n = sizeof(arr)/sizeof(arr[0]);
-
-    printf("Original array: ");
+void printArray(int arr[], int n){
     for(i = 0; i < n; i++) {
         printf("%c ", arr[i]);
     }
-
-    insertionSort(arr, n);
-
-    printf("\nSorted array:   ");
-    for(i = 0; i < n; i++) {
-        printf("%c ", arr[i]);
-    }
-
-    return 0;
 }
 
 
