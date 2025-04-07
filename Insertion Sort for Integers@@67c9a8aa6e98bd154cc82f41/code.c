@@ -16,3 +16,13 @@ void insertionSort(int arr[], int n) {
     }
 }
 
+void printArray(char arr[], int n) {
+    int i;
+    for(i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+
+
