@@ -36,10 +36,10 @@ int main() {
 
     // Display results
     printf("\n--- Total Revenue ---\n");
-    printf("Standard: ₹%.2f\n", standardTotal);
-    printf("Premium : ₹%.2f\n", premiumTotal);
-    printf("VIP     : ₹%.2f\n", vipTotal);
-    printf("Overall : ₹%.2f\n", standardTotal + premiumTotal + vipTotal);
+    printf("Standard: ₹%.2f", standardTotal);
+    printf("Premium : ₹%.2f", premiumTotal);
+    printf("VIP     : ₹%.2f", vipTotal);
+    // printf("Overall : ₹%.2f", standardTotal + premiumTotal + vipTotal);
 
     return 0;
 }
