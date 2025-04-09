@@ -24,7 +24,7 @@ int main() {
     if (maxEven != -1)
         printf("%d\n", maxEven);
     else
-        printf("No even number found\n");
+        printf("-1");
 
     return 0;
 }
