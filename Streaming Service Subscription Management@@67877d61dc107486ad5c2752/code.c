@@ -33,9 +33,9 @@ int main() {
     }
 
     // Output as specified
-    printf("Basic: %d Users, Revenue: %d\n", basicUsers, basicRevenue);
-    printf("Standard: %d Users, Revenue: %d\n", standardUsers, standardRevenue);
-    printf("Premium: %d Users, Revenue: %d\n", premiumUsers, premiumRevenue);
+    printf("Basic: %d Users, Revenue: %d", basicUsers, basicRevenue);
+    printf("Standard: %d Users, Revenue: %d", standardUsers, standardRevenue);
+    printf("Premium: %d Users, Revenue: %d", premiumUsers, premiumRevenue);
 
     return 0;
 }
