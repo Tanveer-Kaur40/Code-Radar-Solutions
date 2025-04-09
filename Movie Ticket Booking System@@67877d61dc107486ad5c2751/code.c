@@ -1,45 +1,34 @@
-#include <stdio.h>
-#include <string.h>
+// Your code here...
 
-#define MAX_TICKETS 100
+#include<stdio.h>
+#include<string.h>
+typedef struct movie{
+    char name[50];
+    char type[50];
+    int  price;
 
-// Define structure
-struct MovieTicket {
-    char movieName[50];
-    char ticketType[10];  // Can be "Standard", "Premium", "VIP"
-    float ticketPrice;
-};
-
-int main() {
-    struct MovieTicket tickets[MAX_TICKETS];
+}m;
+int main(){
     int n;
-    float standardTotal = 0, premiumTotal = 0, vipTotal = 0;
-
-    scanf("%d", &n);
-
-    for (int i = 0; i < n; i++) {
-        scanf(" %[^\n]s", tickets[i].movieName);  // Read string with spaces
-        scanf(" %s", tickets[i].ticketType);
-        scanf("%f", &tickets[i].ticketPrice);
-
-        // Categorize revenue
-        if (strcmp(tickets[i].ticketType, "Standard") == 0) {
-            standardTotal += tickets[i].ticketPrice;
-        } else if (strcmp(tickets[i].ticketType, "Premium") == 0) {
-            premiumTotal += tickets[i].ticketPrice;
-        } else if (strcmp(tickets[i].ticketType, "VIP") == 0) {
-            vipTotal += tickets[i].ticketPrice;
-        } else {
-            printf("Invalid ticket type entered!\n");
+    scanf("%d",&n);
+    m movies[100];
+    for(int i=0;i<n;i++){
+        scanf("%s %s %d",&movies[i].name,&movies[i].type,&movies[i].price);
+    }
+    float std_price=0;
+    float pr_price=0;
+    float vip_price=0;
+    for(int i=0;i<n;i++){
+        if(strcmp(movies[i].type,"Standard")==0){
+            std_price+=movies[i].price;
+        }
+        else if(strcmp(movies[i].type,"Premium")==0){
+            pr_price+=movies[i].price;
+        }
+        else if(strcmp(movies[i].type,"VIP")==0){
+            vip_price+=movies[i].price;
         }
     }
+    printf("Standard: %.2f, Premium: %.2f, VIP: %.2f",std_price,pr_price,vip_price);
 
-    // Display results
-    printf("\n--- Total Revenue ---\n");
-    printf("Standard: ₹%.2f", standardTotal);
-    printf("Premium : ₹%.2f", premiumTotal);
-    printf("VIP     : ₹%.2f", vipTotal);
-    // printf("Overall : ₹%.2f", standardTotal + premiumTotal + vipTotal);
-
-    return 0;
 }
