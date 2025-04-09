@@ -1,30 +1,52 @@
-#include <stdio.h>
+*#include <stdio.h>
+#include <limits.h>
+
+int findLargestEven(int arr[], int n) {
+    int maxEven = INT_MIN;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0 && arr[i] > maxEven) {
+            maxEven = arr[i];
+        }
+    }
+    return (maxEven == INT_MIN) ? -1 : maxEven;
+}
 
 int main() {
     int n;
     scanf("%d", &n);
     int arr[n];
 
-    // Input array elements
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
 
-    int maxEven = -1; // Assume no even number
+    printf("%d\n", findLargestEven(arr, n));
 
-    // Check for largest even number
+    return 0;
+}
+#include <stdio.h>
+#include <limits.h>
+
+int findLargestEven(int arr[], int n) {
+    int maxEven = INT_MIN;
     for (int i = 0; i < n; i++) {
-        if (arr[i] % 2 == 0) {
-            if (arr[i] > maxEven) {
-                maxEven = arr[i];
-            }
+        if (arr[i] % 2 == 0 && arr[i] > maxEven) {
+            maxEven = arr[i];
         }
     }
+    return (maxEven == INT_MIN) ? -1 : maxEven;
+}
 
-    if (maxEven != -1)
-        printf("%d\n", maxEven);
-    else
-        printf("-2");
+int main() {
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("%d\n", findLargestEven(arr, n));
 
     return 0;
 }
