@@ -15,16 +15,11 @@ int main() {
     int n;
     float standardTotal = 0, premiumTotal = 0, vipTotal = 0;
 
-    printf("Enter number of tickets sold: ");
     scanf("%d", &n);
 
     for (int i = 0; i < n; i++) {
-        printf("\nEnter details for ticket %d\n", i + 1);
-        printf("Movie Name: ");
         scanf(" %[^\n]s", tickets[i].movieName);  // Read string with spaces
-        printf("Ticket Type (Standard/Premium/VIP): ");
         scanf(" %s", tickets[i].ticketType);
-        printf("Ticket Price: ");
         scanf("%f", &tickets[i].ticketPrice);
 
         // Categorize revenue
