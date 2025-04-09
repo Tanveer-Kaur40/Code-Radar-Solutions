@@ -1,36 +1,26 @@
 #include <stdio.h>
+#include <stdlib.h>  
+int findDuplicate(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        int index = abs(arr[i]); 
+        if (arr[index] < 0) {
+            return index; 
+        }
+        arr[index] = -arr[index]; 
+    }
+    return -1;
+}
 
 int main() {
     int n;
-    scanf("%d", &n);  // Read size of the array
-
+    scanf("%d", &n);
     int arr[n];
+
     for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);  // Read array elements
+        scanf("%d", &arr[i]);
     }
 
-    int foundDuplicate = 0;
-
-    printf("Duplicate elements:\n");
-    for (int i = 0; i < n; i++) {
-        int count = 1;
-        if (arr[i] != -1) {
-            for (int j = i + 1; j < n; j++) {
-                if (arr[i] == arr[j]) {
-                    count++;
-                    arr[j] = -1; // Mark duplicate as visited
-                }
-            }
-            if (count > 1) {
-                printf("%d\n", arr[i]);
-                foundDuplicate = 1;
-            }
-        }
-    }
-
-    if (!foundDuplicate) {
-        printf("No duplicates found.\n");
-    }
+    printf("%d\n", findDuplicate(arr, n));
 
     return 0;
 }
