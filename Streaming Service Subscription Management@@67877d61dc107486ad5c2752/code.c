@@ -4,7 +4,7 @@
 struct Subscription {
     char username[100];
     char type[20];
-    int cost;
+    float cost;
 };
 
 int main() {
@@ -15,10 +15,10 @@ int main() {
 
     // Counters and revenue holders
     int basicUsers = 0, standardUsers = 0, premiumUsers = 0;
-    int basicRevenue = 0, standardRevenue = 0, premiumRevenue = 0;
+    float basicRevenue = 0.0, standardRevenue = 0.0, premiumRevenue = 0.0;
 
     for (int i = 0; i < n; i++) {
-        scanf("%s %s %d", subs[i].username, subs[i].type, &subs[i].cost);
+        scanf("%s %s %f", subs[i].username, subs[i].type, &subs[i].cost);
 
         if (strcmp(subs[i].type, "Basic") == 0) {
             basicUsers++;
@@ -32,10 +32,10 @@ int main() {
         }
     }
 
-    // Output as specified
-    printf("Basic: %d Users, Revenue: %d", basicUsers, basicRevenue);
-    printf("Standard: %d Users, Revenue: %d", standardUsers, standardRevenue);
-    printf("Premium: %d Users, Revenue: %d", premiumUsers, premiumRevenue);
+    printf("Basic: %d Users, Revenue: %.2f; ", basicUsers, basicRevenue);
+    printf("Standard: %d Users, Revenue: %.2f; ", standardUsers, standardRevenue);
+    printf("Premium: %d Users, Revenue: %.2f\n", premiumUsers, premiumRevenue);
 
     return 0;
 }
+
