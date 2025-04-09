@@ -1,19 +1,27 @@
-#include <stdio.h>
+#include<stdio.h>
 struct student{
-    int rollno;
-    char name[100];
+    int rollNumber;
+    char name[50];
     float marks;
 };
 int main(){
     int n;
     scanf("%d",&n);
-    struct student s[n], compareno;
+    struct student students[n];
+  
+    
     for(int i=0;i<n;i++){
-        scanf("%d %s %f",&s[i].rollno, s[i].name, &s[i].marks);
-        if(i==0 || compareno.marks > s[i].marks){
-            printf("Roll Number: %d, Name: %s, Marks: %.2f\n",compareno.rollno, compareno.name, compareno.marks);
-          
+        scanf("%d %s %f",&students[i].rollNumber,&students[i].name,&students[i].marks);
+    }
+      for(int i = 0; i < n - 1; i++) {
+        for(int j = 0; j < n - i - 1; j++) {
+            if(students[j].marks < students[j + 1].marks) {
+                struct student temp = students[j];
+                students[j] = students[j + 1];
+                students[j + 1] = temp;
+            }
         }
     }
-    return 0;
-}
+    for(int i=0;i<n;i++){
+    printf("Roll Number: %d, Name: %s, Marks: %.2f\n",students[i].rollNumber,students[i].name,students[i].marks);
+}}
