@@ -1,4 +1,4 @@
-*#include <stdio.h>
+#include <stdio.h>
 
 
 int findUnsortedSubarray(int arr[], int n) {
@@ -39,4 +39,3 @@ int findUnsortedSubarray(int arr[], int n) {
     
     return right - left + 1;
 }
-*
