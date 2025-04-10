@@ -3,14 +3,20 @@
 
 int main() {
     char str[100];
-    int freq[256] = {0};  
     scanf("%s", str);
-    for (int i = 0; i < strlen(str); i++) {
+
+    int freq[256] = {0};
+
+    // Count frequency of each character
+    for (int i = 0; str[i] != '\0'; i++) {
         freq[(unsigned char)str[i]]++;
     }
-    for (int i = 0; i < 256; i++) {
-        if (freq[i] > 0) {
-            printf("%c: %d\n", i, freq[i]);
+
+    // Print character frequencies
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (freq[(unsigned char)str[i]] > 0) {
+            printf("%c: %d\n", str[i], freq[(unsigned char)str[i]]);
+            freq[(unsigned char)str[i]] = 0; // Mark as printed
         }
     }
 
